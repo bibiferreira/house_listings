@@ -1,28 +1,19 @@
 @import "./base.css";
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
 
 @media (min-width: 1024px) {
   body {
-    
+
   }
 
   #app {
@@ -56,7 +47,74 @@ header ul a {
   padding: 0 20px;
 }
 
+/* Content */
 main {
   width: var(--dtt-s-content-width);
   margin: 0 auto;
+  padding: 40px 20px;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 14px;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+button span {
+  font: var(--dtt-f-button);
+}
+
+button img {
+  padding-right: 8px;
+  height: 15px;
+}
+
+input[type="text"], input[type="search"] {
+  color: var(--color-input-color);
+  font: var(--dtt-f-input-field);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-input-placeholder);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--color-input-placeholder);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--color-input-placeholder);
+}
+
+.primary-button {
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+}
+
+.tertiary-button {
+  background-color: var(--color-button-tertiary);
+  color: var(--color-button-tertiary-text);
+}
+
+h2 {
+  font: var(--dtt-f-header-2);
+}
+
+/* TABS */
+
+.tab button{
+  width: 140px;
+  text-align: center;
+  display: inline;
+}
+
+.first-tab {
+  border-radius: 4px 0 0 4px;
+}
+
+.last-tab {
+  border-radius: 0 4px 4px 0;
 }
